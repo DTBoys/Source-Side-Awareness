@@ -1,0 +1,39 @@
+{
+	"job": {
+	  "content":[
+		{
+		  "reader":{
+			"name":"txtfilereader",
+			"parameter":{
+				"path": ["/u01/ZJSY/version/TY/shell/log/odpsTb/kfdy/csv/${curdt}/dbxx*.csv"],
+				"fileFormat": "csv",
+				"encoding": "utf-8",
+				"column": [{"index":0,"type":"string"},{"index":1,"type":"string"},{"index":2,"type":"string"},{"index":3,"type":"string"},{"index":4,"type":"string"},{"index":5,"type":"string"},{"index":6,"type":"date"}],
+				 "fieldDelimiter": ","
+			}
+		  },
+		   "writer":{
+                "name":"odpswriter",
+                "parameter":{
+                "accessId":"LTAIlR3XFSA8nXIP",
+                "accessKey":"WkU9JULAp6WiCptKI7iQFknZcm7di9",
+                "accountType":"aliyun",
+                "column":["rwbh","ydklx","ydbxt","mbdxm","dbbsl","bgbsl","dbsj"],
+                "odpsServer":"http://service.odps.aliyun.com/api",
+                "project":"SC_JS_YY",
+                "table":"T_YY_YDGZ_DBXX",
+                "truncate": "false"
+                }
+            }
+		}
+	  ],
+	  "setting":{
+		"errorLimit":{
+		"record":0
+		 },
+		"speed":{
+		  "channel":"2"
+		}
+	  }
+	 }
+	}
